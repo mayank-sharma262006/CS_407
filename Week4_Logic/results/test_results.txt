@@ -1,0 +1,47 @@
+LOGIC LAB - PLANNER TEST RESULTS
+
+Test A - solvable problem
+  Setup: original warehouse problem
+  Actions available: Move(A,B), Move(B,A), Move(B,C), Move(C,B), PickUp(Package,A), PickUp(Package,B), PickUp(Package,C), Drop(Package,A), Drop(Package,B), Drop(Package,C)
+  Initial state: {At(Package,A), At(Robot,A)}
+  Goal: {At(Package,C)}
+  Plan found: Yes
+  Plan: PickUp(Package,A) -> Move(A,B) -> Move(B,C) -> Drop(Package,C)
+  Plan valid (independent check): True
+  Expected: a valid plan
+  Result: PASS
+
+Test B - impossible problem
+  Setup: every PickUp action removed
+  Actions available: Move(A,B), Move(B,A), Move(B,C), Move(C,B), Drop(Package,A), Drop(Package,B), Drop(Package,C)
+  Initial state: {At(Package,A), At(Robot,A)}
+  Goal: {At(Package,C)}
+  Plan found: No plan found
+  Plan: -
+  Plan valid (independent check): n/a
+  Expected: no plan
+  Result: PASS
+
+Test C - irrelevant actions
+  Setup: only Move actions: the robot can reach C, the package cannot
+  Actions available: Move(A,B), Move(B,A), Move(B,C), Move(C,B)
+  Initial state: {At(Package,A), At(Robot,A)}
+  Goal: {At(Package,C)}
+  Plan found: No plan found
+  Plan: -
+  Plan valid (independent check): n/a
+  Expected: no plan
+  Result: PASS
+
+Test C - goal check on the robot-only state
+  State: {At(Package,A), At(Robot,C)}
+  Treated as goal: False
+  Expected: False
+  Result: PASS
+
+Checker sanity - plans that must be rejected
+  Move(A,B) -> Move(B,C): rejected
+  Move(A,C) -> Drop(Package,C): rejected
+  Move(A,B) -> PickUp(Package,B) -> Move(B,C) -> Drop(Package,C): rejected
+
+All checks passed: True

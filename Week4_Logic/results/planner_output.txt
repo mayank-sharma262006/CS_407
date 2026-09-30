@@ -1,0 +1,9 @@
+Initial state: {At(Package,A), At(Robot,A)}
+Goal: {At(Package,C)}
+Plan: PickUp(Package,A) -> Move(A,B) -> Move(B,C) -> Drop(Package,C)
+S0: {At(Package,A), At(Robot,A)}
+S1: {At(Robot,A), Holding(Package)}   after PickUp(Package,A)
+S2: {At(Robot,B), Holding(Package)}   after Move(A,B)
+S3: {At(Robot,C), Holding(Package)}   after Move(B,C)
+S4: {At(Package,C), At(Robot,C)}   after Drop(Package,C)
+Goal satisfied in final state: True
