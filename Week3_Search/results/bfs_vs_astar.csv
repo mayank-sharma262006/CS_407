@@ -1,0 +1,9 @@
+Map,Search,Solution found,Path length,States expanded
+Lab warehouse,BFS,True,40,64
+Lab warehouse,A* (Manhattan),True,40,64
+Two routes,BFS,True,10,20
+Two routes,A* (Manhattan),True,10,11
+Open floor,BFS,True,12,77
+Open floor,A* (Manhattan),True,12,21
+Overestimate trap,BFS,True,12,38
+Overestimate trap,A* (Manhattan),True,12,27

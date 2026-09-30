@@ -1,0 +1,9 @@
+Test,Algorithm,Expected length,Solution found,Path length,States expanded,Pass
+1 Original warehouse,A*,40,True,40,64,True
+1 Original warehouse,BFS,40,True,40,64,True
+2 Trivial one-step,A*,1,True,1,2,True
+2 Trivial one-step,BFS,1,True,1,2,True
+3 No solution,A*,none,False,,9,True
+3 No solution,BFS,none,False,,9,True
+4 Alternative paths,A*,10,True,10,11,True
+4 Alternative paths,BFS,10,True,10,20,True

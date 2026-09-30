@@ -1,0 +1,30 @@
+BFS vs A*
+  Map | Search | Solution found | Path length | States expanded
+  Lab warehouse | BFS | True | 40 | 64
+  Lab warehouse | A* (Manhattan) | True | 40 | 64
+  Two routes | BFS | True | 10 | 20
+  Two routes | A* (Manhattan) | True | 10 | 11
+  Open floor | BFS | True | 12 | 77
+  Open floor | A* (Manhattan) | True | 12 | 21
+  Overestimate trap | BFS | True | 12 | 38
+  Overestimate trap | A* (Manhattan) | True | 12 | 27
+
+Heuristic investigation
+  Map | Search | Solution found | Path length | States expanded
+  Lab warehouse | A* with h = 0 | True | 40 | 64
+  Lab warehouse | A* with Manhattan | True | 40 | 64
+  Lab warehouse | A* with Euclidean | True | 40 | 64
+  Lab warehouse | A* with 2 x Manhattan | True | 40 | 64
+  Two routes | A* with h = 0 | True | 10 | 20
+  Two routes | A* with Manhattan | True | 10 | 11
+  Two routes | A* with Euclidean | True | 10 | 17
+  Two routes | A* with 2 x Manhattan | True | 10 | 11
+  Open floor | A* with h = 0 | True | 12 | 77
+  Open floor | A* with Manhattan | True | 12 | 21
+  Open floor | A* with Euclidean | True | 12 | 47
+  Open floor | A* with 2 x Manhattan | True | 12 | 18
+  Overestimate trap | A* with h = 0 | True | 12 | 38
+  Overestimate trap | A* with Manhattan | True | 12 | 27
+  Overestimate trap | A* with Euclidean | True | 12 | 32
+  Overestimate trap | A* with 2 x Manhattan | True | 18 | 33
+
