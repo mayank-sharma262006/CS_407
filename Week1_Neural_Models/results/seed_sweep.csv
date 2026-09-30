@@ -1,0 +1,4 @@
+Hidden activation,Runs with 4/4 correct,Mean grad norm step 0,Seeds solved
+sigmoid,8/20,0.0072,1 2 3 4 11 12 14 16
+tanh,9/20,0.0329,0 2 3 4 10 11 13 14 19
+relu,5/20,0.0373,2 5 11 15 18

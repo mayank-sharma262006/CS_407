@@ -1,0 +1,4 @@
+Seed,Hidden activation,Final loss,4/4 correct,Grad norm step 0,Grad norm step 10
+0,sigmoid,0.477470,no (3/4),0.0009,0.0012
+0,tanh,0.000189,yes,0.0618,0.0094
+0,relu,0.693147,no (2/4),0.0017,0.0000
