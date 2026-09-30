@@ -1,0 +1,19 @@
+=== Lab warehouse ===
+Start (1, 1), goal (1, 19)
+Cells discovered by BFS: 63
+Path found with 20 moves (replay check passed).
+Actions: Right Right Right Down Right Right Right Up Right Right Right Right Right Right Right Right Right Right Right Right
+Cells:   (1,1) (1,2) (1,3) (1,4) (2,4) (2,5) (2,6) (2,7) (1,7) (1,8) (1,9) (1,10) (1,11) (1,12) (1,13) (1,14) (1,15) (1,16) (1,17) (1,18) (1,19)
+#####################
+#S***.#************G#
+#.##****##########..#
+#....##.............#
+#.######.###.#.###..#
+#........#..........#
+#####################
+
+=== Blocked warehouse (goal unreachable) ===
+Start (1, 1), goal (1, 19)
+Cells discovered by BFS: 20
+No collision-free path exists from S to G.
+
