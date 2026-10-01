@@ -1,0 +1,41 @@
+MODEL COMPARISON
+
+Vocabulary: 10 words, plus <START> and <END>
+Possible next tokens: 11 (the words and <END>)
+
+Parameters and contexts
+  model         | possible contexts | full CPT entries | free parameters | contexts seen | nonzero probabilities | contexts with no data
+  first-order   |                11 |              121 |             110 |            11 |                    17 |                     0
+  second-order  |               111 |             1221 |            1110 |            15 |                    19 |                    96
+  (free parameters = contexts x (outcomes - 1), since each row sums to 1)
+
+Diversity over 1000 sampled sentences per model (seed 7)
+  first-order:
+    distinct sentences: 194
+    samples identical to a training sentence: 154/1000
+    distinct sentences not in the training data: 188
+    length in words: min 2, max 25, mean 6.43
+    stopped at <END>: 975, hit length limit: 25
+    most frequent:
+       160 x  the rug
+       154 x  the park
+       142 x  the mat
+  second-order:
+    distinct sentences: 6
+    samples identical to a training sentence: 1000/1000
+    distinct sentences not in the training data: 0
+    length in words: min 6, max 6, mean 6.00
+    stopped at <END>: 1000, hit length limit: 0
+    most frequent:
+       184 x  the dog ran to the park
+       169 x  the dog sat on the mat
+       168 x  the dog sat on the rug
+
+Sentence probabilities (chain rule, including <END>)
+  sentence                                  first-order  second-order
+  the cat sat on the mat                       0.027778      0.166667
+  the dog ran to the park                      0.013889      0.166667
+  the cat ran to the mat                       0.013889      0.000000
+  the dog sat on the cat sat on the rug        0.004630      0.000000
+  the park                                     0.166667      0.000000
+  the mat sat on the cat                       0.000000      0.000000

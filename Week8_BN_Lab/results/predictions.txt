@@ -1,0 +1,33 @@
+NEXT-WORD PREDICTION (first-order)
+
+P(X_t+1 | X_t = <START>): the 1.000
+    argmax: the
+P(X_t+1 | X_t = the): cat 0.250, dog 0.250, mat 0.167, park 0.167, rug 0.167
+    argmax: cat
+P(X_t+1 | X_t = cat): sat 0.667, ran 0.333
+    argmax: sat
+P(X_t+1 | X_t = dog): sat 0.667, ran 0.333
+    argmax: sat
+P(X_t+1 | X_t = sat): on 1.000
+    argmax: on
+P(X_t+1 | X_t = ran): to 1.000
+    argmax: to
+P(X_t+1 | X_t = on): the 1.000
+    argmax: the
+P(X_t+1 | X_t = to): the 1.000
+    argmax: the
+P(X_t+1 | X_t = mat): <END> 1.000
+    argmax: <END>
+
+NEXT-WORD PREDICTION (second-order), same last word, different word before it
+
+P(X_t+1 | (on, the)): mat 0.500, rug 0.500
+    argmax: mat
+P(X_t+1 | (to, the)): park 1.000
+    argmax: park
+P(X_t+1 | (<START>, the)): cat 0.500, dog 0.500
+    argmax: cat
+P(X_t+1 | (the, cat)): sat 0.667, ran 0.333
+    argmax: sat
+P(X_t+1 | (the, dog)): sat 0.667, ran 0.333
+    argmax: sat

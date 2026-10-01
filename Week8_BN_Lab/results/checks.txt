@@ -1,0 +1,78 @@
+Normalisation, first-order: sum over v of P(v | context)
+  <START>                1.000000000000
+  the                    1.000000000000
+  cat                    1.000000000000
+  sat                    1.000000000000
+  on                     1.000000000000
+  mat                    1.000000000000
+  rug                    1.000000000000
+  dog                    1.000000000000
+  ran                    1.000000000000
+  to                     1.000000000000
+  park                   1.000000000000
+  [PASS] all 11 distributions sum to 1 within 1e-12
+
+Normalisation, second-order: sum over v of P(v | context)
+  (<START>, <START>)     1.000000000000
+  (<START>, the)         1.000000000000
+  (the, cat)             1.000000000000
+  (cat, sat)             1.000000000000
+  (sat, on)              1.000000000000
+  (on, the)              1.000000000000
+  (the, mat)             1.000000000000
+  (the, rug)             1.000000000000
+  (the, dog)             1.000000000000
+  (dog, sat)             1.000000000000
+  (dog, ran)             1.000000000000
+  (ran, to)              1.000000000000
+  (to, the)              1.000000000000
+  (the, park)            1.000000000000
+  (cat, ran)             1.000000000000
+  [PASS] all 15 distributions sum to 1 within 1e-12
+
+Counts against hand-counted values (first-order)
+  [PASS] C(<START>, .) = {'the': 6}
+  [PASS] C(the, .) = {'cat': 3, 'dog': 3, 'mat': 2, 'rug': 2, 'park': 2}
+  [PASS] C(cat, .) = {'sat': 2, 'ran': 1}
+  [PASS] C(dog, .) = {'sat': 2, 'ran': 1}
+  [PASS] C(sat, .) = {'on': 4}
+  [PASS] C(ran, .) = {'to': 2}
+
+Sampling follows the table: 60000 draws from P(. | the), seed 1
+  cat    model 0.2500   observed 0.2498
+  dog    model 0.2500   observed 0.2493
+  mat    model 0.1667   observed 0.1669
+  park   model 0.1667   observed 0.1640
+  rug    model 0.1667   observed 0.1699
+  [PASS] largest gap 0.0033 is below 0.01
+
+Greedy decoding picks the argmax
+  [PASS] most_probable(the) = cat
+  [PASS] most_probable(cat) = sat
+  [PASS] most_probable(dog) = sat
+  [PASS] most_probable(sat) = on
+  [PASS] most_probable(ran) = to
+  [PASS] most_probable(on) = the
+  [PASS] most_probable(to) = the
+
+Unseen context
+  [PASS] distribution('bird') is empty
+  [PASS] most_probable('bird') is None
+  [PASS] second-order distribution(('cat', 'park')) is empty
+
+First word is predicted from the padded START context
+  [PASS] first-order P(the | <START>) = 1
+  [PASS] second-order P(the | <START>, <START>) = 1
+
+Total probability of all complete sentences (exact forward pass)
+  first-order, sentences up to  5 words: 0.5000000000
+  first-order, sentences up to 10 words: 0.8750000000
+  first-order, sentences up to 20 words: 0.9687500000
+  first-order, sentences up to 60 words: 0.9999694824
+  second-order, sentences up to  5 words: 0.0000000000
+  second-order, sentences up to  6 words: 1.0000000000
+  second-order, sentences up to 10 words: 1.0000000000
+  [PASS] first-order mass tends to 1
+  [PASS] second-order mass is exactly 1 by length 6
+
+All checks passed: True

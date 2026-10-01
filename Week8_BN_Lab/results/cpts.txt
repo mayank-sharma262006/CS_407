@@ -1,0 +1,31 @@
+CONDITIONAL PROBABILITY TABLES
+
+First-order: P(X_t | X_t-1)
+P(. | <START>): the 6/6 = 1.000
+P(. | the): cat 3/12 = 0.250, dog 3/12 = 0.250, mat 2/12 = 0.167, park 2/12 = 0.167, rug 2/12 = 0.167
+P(. | cat): sat 2/3 = 0.667, ran 1/3 = 0.333
+P(. | sat): on 4/4 = 1.000
+P(. | on): the 4/4 = 1.000
+P(. | mat): <END> 2/2 = 1.000
+P(. | rug): <END> 2/2 = 1.000
+P(. | dog): sat 2/3 = 0.667, ran 1/3 = 0.333
+P(. | ran): to 2/2 = 1.000
+P(. | to): the 2/2 = 1.000
+P(. | park): <END> 2/2 = 1.000
+
+Second-order: P(X_t | X_t-2, X_t-1)
+P(. | (<START>, <START>)): the 6/6 = 1.000
+P(. | (<START>, the)): cat 3/6 = 0.500, dog 3/6 = 0.500
+P(. | (the, cat)): sat 2/3 = 0.667, ran 1/3 = 0.333
+P(. | (cat, sat)): on 2/2 = 1.000
+P(. | (sat, on)): the 4/4 = 1.000
+P(. | (on, the)): mat 2/4 = 0.500, rug 2/4 = 0.500
+P(. | (the, mat)): <END> 2/2 = 1.000
+P(. | (the, rug)): <END> 2/2 = 1.000
+P(. | (the, dog)): sat 2/3 = 0.667, ran 1/3 = 0.333
+P(. | (dog, sat)): on 2/2 = 1.000
+P(. | (dog, ran)): to 1/1 = 1.000
+P(. | (ran, to)): the 2/2 = 1.000
+P(. | (to, the)): park 2/2 = 1.000
+P(. | (the, park)): <END> 2/2 = 1.000
+P(. | (cat, ran)): to 1/1 = 1.000
