@@ -12,7 +12,7 @@ from.
 | [Week2_Agents](Week2_Agents/) | Goal-based agent for warehouse navigation | `warehouse_agent.py` | [REPORT.md](Week2_Agents/REPORT.md) |
 | [Week3_Search](Week3_Search/) | A* and BFS, tests, heuristic investigation | `astar.py`, `bfs.py` | [REPORT.md](Week3_Search/REPORT.md) |
 | [Week4_Logic](Week4_Logic/) | Logical planning with BFS, optional Prolog verifier | `planner.py` | [REPORT.md](Week4_Logic/REPORT.md) |
-
+| [Week8_BN_Lab](Week8_BN_Lab/) | Bayesian networks and autoregressive language models (first- and second-order) | `first_order_model.py`, `second_order_model.py` | [REPORT.md](Week8_BN_Lab/REPORT.md) |
 ## Layout of a week folder
 
 | File | Purpose |
@@ -25,7 +25,7 @@ from.
 
 ## Running the code
 
-Weeks 2, 3 and 4 need only Python 3 and its standard library. Week 1 needs
+Weeks 2, 3, 4 and 8 need only Python 3 and its standard library. Week 1 needs
 PyTorch:
 
 ```
